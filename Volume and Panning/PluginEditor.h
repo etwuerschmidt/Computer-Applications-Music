@@ -13,7 +13,6 @@
 
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "PluginProcessor.h"
-#include "PluginParameter.h"
 
 //==============================================================================
 /**
@@ -32,9 +31,6 @@ public:
     void sliderValueChanged(Slider*) override;
     void timerCallback() override;
 
-    static const char* banksy3_jpg;
-    static const int banksy3_jpgSize;
-    
 private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
@@ -47,9 +43,6 @@ private:
     //Mu45Param: If you like you can also create labels
     ScopedPointer<Label> volumeLabel;
 	ScopedPointer<Label> balanceLabel;
-	
-	ScopedPointer<HyperlinkButton> hyperlinkButton;
-    Image cachedImage_banksy3_jpg_1;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (Mu45effectAudioProcessorEditor)
 };
